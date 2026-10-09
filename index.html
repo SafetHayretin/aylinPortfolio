@@ -645,6 +645,223 @@
     margin: 1.25rem 0 0.6rem;
   }
 
+
+
+  /* RESPONSIVE FIXES — TABLET & MOBILE */
+  img {
+    max-width: 100%;
+  }
+
+  .work-title,
+  .work-description,
+  .timeline-role,
+  .timeline-company {
+    overflow-wrap: anywhere;
+  }
+
+  /* Tablet: stack the hero so the portrait has enough width and is never cropped at the face. */
+  @media (max-width: 1100px) {
+    nav {
+      padding: 1rem 2rem;
+    }
+
+    .nav-links {
+      gap: 1.2rem;
+    }
+
+    .nav-links a {
+      font-size: 0.72rem;
+      letter-spacing: 0.07em;
+    }
+
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      padding-top: 68px;
+    }
+
+    .hero-left {
+      padding: 4.5rem 2.5rem 3.5rem;
+    }
+
+    .hero-right {
+      height: auto;
+      aspect-ratio: 16 / 10;
+      min-height: 0;
+      background: var(--paper);
+    }
+
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 18%;
+      opacity: 1;
+    }
+
+    .hero-right::after {
+      display: none;
+    }
+
+    section {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    .work-samples-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .portfolio-sample {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .project-preview {
+      width: 100%;
+      height: clamp(240px, 48vw, 390px);
+      aspect-ratio: auto;
+    }
+
+    .project-preview-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+
+  /* Phones */
+  @media (max-width: 700px) {
+    nav {
+      padding: 0.9rem 1.2rem;
+    }
+
+    .nav-name {
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .hero {
+      padding-top: 58px;
+    }
+
+    .hero-left {
+      padding: 3.5rem 1.25rem 2.5rem;
+    }
+
+    .hero-name {
+      font-size: clamp(2.8rem, 16vw, 4.4rem);
+    }
+
+    .hero-title {
+      font-size: 1.2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-bio {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .hero-langs {
+      margin-bottom: 2rem;
+    }
+
+    .hero-right {
+      aspect-ratio: 4 / 3;
+    }
+
+    .hero-right img {
+      object-position: 50% 14%;
+    }
+
+    section {
+      padding: 3.5rem 1.2rem;
+    }
+
+    .section-title {
+      margin-bottom: 2rem;
+    }
+
+    .portfolio-sample {
+      padding: 1.25rem;
+    }
+
+    .portfolio-sample .work-title {
+      font-size: clamp(1.45rem, 7vw, 2rem);
+      line-height: 1.15;
+    }
+
+    .project-preview {
+      height: 220px;
+      margin-bottom: 1rem;
+    }
+
+    .project-preview-copy {
+      height: auto;
+      min-height: 220px;
+      padding: 1rem;
+    }
+
+    .project-preview-copy p {
+      font-size: 0.94rem;
+      -webkit-line-clamp: 7;
+    }
+
+    .work-tags {
+      gap: 0.4rem !important;
+    }
+
+    .work-tag {
+      font-size: 0.62rem;
+      padding: 0.25rem 0.5rem;
+    }
+
+    .timeline-item {
+      grid-template-columns: 1fr;
+      gap: 0.7rem;
+      padding: 2rem 0;
+    }
+
+    .certs-grid {
+      grid-template-columns: 1fr;
+    }
+
+    footer {
+      padding: 1.4rem 1.2rem;
+    }
+  }
+
+  /* Very small phones */
+  @media (max-width: 420px) {
+    .hero-left {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    section {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .portfolio-sample {
+      padding: 1rem;
+    }
+
+    .project-preview {
+      height: 190px;
+    }
+
+    .hero-cta {
+      width: 100%;
+      text-align: center;
+    }
+  }
 </style>
 </head>
 <body>
@@ -760,7 +977,7 @@
 </article>
 <article class="portfolio-sample">
 <p class="work-client">Turkish Editorial Content Sample</p>
-<h3 class="work-title">Türk Dizilerinin Ergenlerin Psikolojisi Üzerindeki Etkisi</h3><a aria-label="Preview: Türk Dizilerinin Ergenlerin Psikolojisi Üzerindeki Etkisi" class="project-preview project-preview-image" href="work_turk_dizileri_ergenler.pdf" rel="noopener" target="_blank"><img alt="Preview of Türk Dizilerinin Ergenlerin Psikolojisi Üzerindeki Etkisi" decoding="async" loading="lazy" src="previews/work_turk_dizileri_ergenler_preview.webp"/></a>
+<h3 class="work-title">Türk Dizilerinin Ergenlerin Psikolojisi Üzerindeki Etkisi</h3><a aria-label="Preview: Türk Dizilerinin Ergenlerin Psikolojisi Üzerindeki Etkisi" class="project-preview project-preview-image" href="work_turk_dizileri_ergenler.pdf" rel="noopener" target="_blank"><img alt="Preview of Türk Dizilerinin Ergenlerin Psikolojisi Üzerindeki Etkisi" decoding="async" loading="lazy" src="previews/work_turk_dizileri_ergenler_preview.jpg"/></a>
 <div class="work-tags">
 <span class="work-tag">Psychology</span>
 <span class="work-tag">Media &amp; Society</span>
@@ -771,7 +988,7 @@
 </article>
 <article class="portfolio-sample">
 <p class="work-client">German Magazine Content Sample</p>
-<h3 class="work-title">Künstliche Intelligenz in der Schule: Hilfe oder Gefahr?</h3><a aria-label="Preview: Künstliche Intelligenz in der Schule: Hilfe oder Gefahr?" class="project-preview project-preview-image" href="work_ki_schule_magazin.pdf" rel="noopener" target="_blank"><img alt="Preview of Künstliche Intelligenz in der Schule: Hilfe oder Gefahr?" decoding="async" loading="lazy" src="previews/work_ki_schule_magazin_preview.webp"/></a>
+<h3 class="work-title">Künstliche Intelligenz in der Schule: Hilfe oder Gefahr?</h3><a aria-label="Preview: Künstliche Intelligenz in der Schule: Hilfe oder Gefahr?" class="project-preview project-preview-image" href="work_ki_schule_magazin.pdf" rel="noopener" target="_blank"><img alt="Preview of Künstliche Intelligenz in der Schule: Hilfe oder Gefahr?" decoding="async" loading="lazy" src="previews/work_ki_schule_magazin_preview.jpg"/></a>
 <div class="work-tags">
 <span class="work-tag">Education</span>
 <span class="work-tag">Technology</span>
@@ -782,7 +999,7 @@
 </article>
 <article class="portfolio-sample">
 <p class="work-client">Turkish Research-Based Content Sample</p>
-<h3 class="work-title">Gençler Neden Artık Ev Sahibi Olmayı Hayal Etmekte Zorlanıyor?</h3><a aria-label="Preview: Gençler Neden Artık Ev Sahibi Olmayı Hayal Etmekte Zorlanıyor?" class="project-preview project-preview-image" href="work_gencler_ev_sahibi.pdf" rel="noopener" target="_blank"><img alt="Preview of Gençler Neden Artık Ev Sahibi Olmayı Hayal Etmekte Zorlanıyor?" decoding="async" loading="lazy" src="previews/work_gencler_ev_sahibi_preview.webp"/></a>
+<h3 class="work-title">Gençler Neden Artık Ev Sahibi Olmayı Hayal Etmekte Zorlanıyor?</h3><a aria-label="Preview: Gençler Neden Artık Ev Sahibi Olmayı Hayal Etmekte Zorlanıyor?" class="project-preview project-preview-image" href="work_gencler_ev_sahibi.pdf" rel="noopener" target="_blank"><img alt="Preview of Gençler Neden Artık Ev Sahibi Olmayı Hayal Etmekte Zorlanıyor?" decoding="async" loading="lazy" src="previews/work_gencler_ev_sahibi_preview.jpg"/></a>
 <div class="work-tags">
 <span class="work-tag">Economy</span>
 <span class="work-tag">Housing</span>
@@ -793,7 +1010,7 @@
 </article>
 <article class="portfolio-sample">
 <p class="work-client">English Content Sample</p>
-<h3 class="work-title">Why Business Owners Need a WordPress Maintenance Partner, Not Just a Developer</h3><a aria-label="Preview: Why Business Owners Need a WordPress Maintenance Partner, Not Just a Developer" class="project-preview project-preview-image" href="work_wordpress_maintenance_updated.pdf" rel="noopener" target="_blank"><img alt="Preview of Why Business Owners Need a WordPress Maintenance Partner, Not Just a Developer" decoding="async" loading="lazy" src="previews/work_wordpress_maintenance_updated_preview.webp"/></a>
+<h3 class="work-title">Why Business Owners Need a WordPress Maintenance Partner, Not Just a Developer</h3><a aria-label="Preview: Why Business Owners Need a WordPress Maintenance Partner, Not Just a Developer" class="project-preview project-preview-image" href="work_wordpress_maintenance_updated.pdf" rel="noopener" target="_blank"><img alt="Preview of Why Business Owners Need a WordPress Maintenance Partner, Not Just a Developer" decoding="async" loading="lazy" src="previews/work_wordpress_maintenance_updated_preview.jpg"/></a>
 <div class="work-tags">
 <span class="work-tag">B2B Content</span>
 <span class="work-tag">WordPress</span>
@@ -801,10 +1018,10 @@
 </div>
 <p class="work-description">Long-form B2B article explaining the difference between website development and ongoing WordPress maintenance, with a service-oriented marketing angle.</p>
 <a class="work-link" href="work_wordpress_maintenance_updated.pdf" rel="noopener" target="_blank">View PDF</a>
-</article><article class="portfolio-sample"><p class="work-client">Email Copy Sample</p><h3 class="work-title">Speak English with More Confidence</h3><a aria-label="Preview: Speak English with More Confidence" class="project-preview project-preview-image" href="work_email_speak_english_confidently.pdf" rel="noopener" target="_blank"><img alt="Preview of Speak English with More Confidence" decoding="async" loading="lazy" src="previews/work_email_speak_english_confidently_preview.webp"/></a><div class="work-tags"><span class="work-tag">Email Copy</span><span class="work-tag">Education</span><span class="work-tag">English</span></div><p class="work-description">Promotional email for private English lessons, addressing common speaking barriers, presenting tailored lesson benefits and leading readers toward a clear reply-based call to action.</p><a class="work-link" href="work_email_speak_english_confidently.pdf" rel="noopener" target="_blank">View PDF</a></article><article class="portfolio-sample"><p class="work-client">Email Copy Sample</p><h3 class="work-title">Your Content Should Sound Native in Every Language</h3><a aria-label="Preview: Your Content Should Sound Native in Every Language" class="project-preview project-preview-image" href="work_email_native_every_language.pdf" rel="noopener" target="_blank"><img alt="Preview of Your Content Should Sound Native in Every Language" decoding="async" loading="lazy" src="previews/work_email_native_every_language_preview.webp"/></a><div class="work-tags"><span class="work-tag">Email Copy</span><span class="work-tag">Translation &amp; Localisation</span><span class="work-tag">English</span></div><p class="work-description">B2B service email positioning translation and language adaptation around natural tone, persuasive intent and cultural fit across Bulgarian, Turkish, English and German.</p><a class="work-link" href="work_email_native_every_language.pdf" rel="noopener" target="_blank">View PDF</a></article>
+</article><article class="portfolio-sample"><p class="work-client">Spec Landing Page Copy</p><h3 class="work-title">Speak English with Confidence</h3><a aria-label="Preview: Speak English with Confidence" class="project-preview project-preview-image" href="work_landing_page_english_lessons.pdf" rel="noopener" target="_blank"><img alt="Preview of Speak English with Confidence" decoding="async" loading="lazy" src="previews/work_landing_page_english_lessons_preview.jpg"/></a><div class="work-tags"><span class="work-tag">Landing Page</span><span class="work-tag">Conversion Copy</span><span class="work-tag">Education</span></div><p class="work-description">Four-page landing page concept for private English lessons, combining a clear hero message, personalised positioning, lesson benefits and a direct booking call to action.</p><a class="work-link" href="work_landing_page_english_lessons.pdf" rel="noopener" target="_blank">View PDF</a></article><article class="portfolio-sample"><p class="work-client">Email Copy Sample</p><h3 class="work-title">Speak English with More Confidence</h3><a aria-label="Preview: Speak English with More Confidence" class="project-preview project-preview-image" href="work_email_speak_english_confidently.pdf" rel="noopener" target="_blank"><img alt="Preview of Speak English with More Confidence" decoding="async" loading="lazy" src="previews/work_email_speak_english_confidently_preview.jpg"/></a><div class="work-tags"><span class="work-tag">Email Copy</span><span class="work-tag">Education</span><span class="work-tag">English</span></div><p class="work-description">Promotional email for private English lessons, addressing common speaking barriers, presenting tailored lesson benefits and leading readers toward a clear reply-based call to action.</p><a class="work-link" href="work_email_speak_english_confidently.pdf" rel="noopener" target="_blank">View PDF</a></article><article class="portfolio-sample"><p class="work-client">Email Copy Sample</p><h3 class="work-title">Your Content Should Sound Native in Every Language</h3><a aria-label="Preview: Your Content Should Sound Native in Every Language" class="project-preview project-preview-image" href="work_email_native_every_language.pdf" rel="noopener" target="_blank"><img alt="Preview of Your Content Should Sound Native in Every Language" decoding="async" loading="lazy" src="previews/work_email_native_every_language_preview.jpg"/></a><div class="work-tags"><span class="work-tag">Email Copy</span><span class="work-tag">Translation &amp; Localisation</span><span class="work-tag">English</span></div><p class="work-description">B2B service email positioning translation and language adaptation around natural tone, persuasive intent and cultural fit across Bulgarian, Turkish, English and German.</p><a class="work-link" href="work_email_native_every_language.pdf" rel="noopener" target="_blank">View PDF</a></article><article class="portfolio-sample"><p class="work-client">Email Newsletter Sample</p><h3 class="work-title">New Events and Discussions in Our Book Club</h3><a aria-label="Preview: New Events and Discussions in Our Book Club" class="project-preview project-preview-image" href="work_email_book_club_newsletter.pdf" rel="noopener" target="_blank"><img alt="Preview of New Events and Discussions in Our Book Club" decoding="async" loading="lazy" src="previews/work_email_book_club_newsletter_preview.jpg"/></a><div class="work-tags"><span class="work-tag">Email Copy</span><span class="work-tag">Newsletter</span><span class="work-tag">Community</span></div><p class="work-description">Multi-section newsletter concept for a book community, combining event promotion, community engagement, donation initiatives and repeated calls to action in a visually led email format.</p><a class="work-link" href="work_email_book_club_newsletter.pdf" rel="noopener" target="_blank">View PDF</a></article>
 <article class="portfolio-sample">
 <p class="work-client">Health &amp; Wellness Article</p>
-<h3 class="work-title">Черен кимион: какво представлява и какви са потенциалните му ползи?</h3><a aria-label="Preview: Черен кимион: какво представлява и какви са потенциалните му ползи?" class="project-preview project-preview-image" href="work_black_cumin.pdf" rel="noopener" target="_blank"><img alt="Preview of Черен кимион: какво представлява и какви са потенциалните му ползи?" decoding="async" loading="lazy" src="previews/work_black_cumin_preview.webp"/></a>
+<h3 class="work-title">Черен кимион: какво представлява и какви са потенциалните му ползи?</h3><a aria-label="Preview: Черен кимион: какво представлява и какви са потенциалните му ползи?" class="project-preview project-preview-image" href="work_black_cumin.pdf" rel="noopener" target="_blank"><img alt="Preview of Черен кимион: какво представлява и какви са потенциалните му ползи?" decoding="async" loading="lazy" src="previews/work_black_cumin_preview.jpg"/></a>
 <div class="work-tags">
 <span class="work-tag">Health Content</span>
 <span class="work-tag">Research-Based Writing</span>
@@ -815,7 +1032,7 @@
 </article>
 <article class="portfolio-sample">
 <p class="work-client">Bulgarian Business Content Sample</p>
-<h3 class="work-title">От експерти за експерти: Как създадохме перфектната платформа за вашия бизнес</h3><a aria-label="Preview: От експерти за експерти: Как създадохме перфектната платформа за вашия бизнес" class="project-preview project-preview-image" href="work_business_platform_bg.pdf" rel="noopener" target="_blank"><img alt="Preview of От експерти за експерти: Как създадохме перфектната платформа за вашия бизнес" decoding="async" loading="lazy" src="previews/work_business_platform_bg_preview.webp"/></a>
+<h3 class="work-title">От експерти за експерти: Как създадохме перфектната платформа за вашия бизнес</h3><a aria-label="Preview: От експерти за експерти: Как създадохме перфектната платформа за вашия бизнес" class="project-preview project-preview-image" href="work_business_platform_bg.pdf" rel="noopener" target="_blank"><img alt="Preview of От експерти за експерти: Как създадохме перфектната платформа за вашия бизнес" decoding="async" loading="lazy" src="previews/work_business_platform_bg_preview.jpg"/></a>
 <div class="work-tags">
 <span class="work-tag">Business Content</span>
 <span class="work-tag">SaaS</span>
@@ -826,7 +1043,7 @@
 </article>
 <article class="portfolio-sample">
 <p class="work-client">Neuroplasticity Writing Sample</p>
-<h3 class="work-title">The Musician Who Rewired Through Practice</h3><a aria-label="Preview: The Musician Who Rewired Through Practice" class="project-preview project-preview-image" href="work_neuroplasticity_musician.pdf" rel="noopener" target="_blank"><img alt="Preview of The Musician Who Rewired Through Practice" decoding="async" loading="lazy" src="previews/work_neuroplasticity_musician_preview.webp"/></a>
+<h3 class="work-title">The Musician Who Rewired Through Practice</h3><a aria-label="Preview: The Musician Who Rewired Through Practice" class="project-preview project-preview-image" href="work_neuroplasticity_musician.pdf" rel="noopener" target="_blank"><img alt="Preview of The Musician Who Rewired Through Practice" decoding="async" loading="lazy" src="previews/work_neuroplasticity_musician_preview.jpg"/></a>
 <div class="work-tags">
 <span class="work-tag">Psychology</span>
 <span class="work-tag">Narrative Writing</span>
@@ -837,7 +1054,7 @@
 </article>
 <article class="portfolio-sample">
 <p class="work-client">Translation Industry Content Sample</p>
-<h3 class="work-title">Защо да изберете преводаческа агенция, регистрирана към МВнР</h3><a aria-label="Preview: Защо да изберете преводаческа агенция, регистрирана към МВнР" class="project-preview project-preview-image" href="work_translation_agency_mfa_bg.pdf" rel="noopener" target="_blank"><img alt="Preview of Защо да изберете преводаческа агенция, регистрирана към МВнР" decoding="async" loading="lazy" src="previews/work_translation_agency_mfa_bg_preview.webp"/></a>
+<h3 class="work-title">Защо да изберете преводаческа агенция, регистрирана към МВнР</h3><a aria-label="Preview: Защо да изберете преводаческа агенция, регистрирана към МВнР" class="project-preview project-preview-image" href="work_translation_agency_mfa_bg.pdf" rel="noopener" target="_blank"><img alt="Preview of Защо да изберете преводаческа агенция, регистрирана към МВнР" decoding="async" loading="lazy" src="previews/work_translation_agency_mfa_bg_preview.jpg"/></a>
 <div class="work-tags">
 <span class="work-tag">Translation Industry</span>
 <span class="work-tag">B2B Content</span>
@@ -848,7 +1065,7 @@
 </article>
 <article class="portfolio-sample">
 <p class="work-client">Translation Industry Content Sample</p>
-<h3 class="work-title">Why Choose a Translation Agency Registered with the Bulgarian MFA?</h3><a aria-label="Preview: Why Choose a Translation Agency Registered with the Bulgarian MFA?" class="project-preview project-preview-image" href="work_translation_agency_mfa_en.pdf" rel="noopener" target="_blank"><img alt="Preview of Why Choose a Translation Agency Registered with the Bulgarian MFA?" decoding="async" loading="lazy" src="previews/work_translation_agency_mfa_en_preview.webp"/></a>
+<h3 class="work-title">Why Choose a Translation Agency Registered with the Bulgarian MFA?</h3><a aria-label="Preview: Why Choose a Translation Agency Registered with the Bulgarian MFA?" class="project-preview project-preview-image" href="work_translation_agency_mfa_en.pdf" rel="noopener" target="_blank"><img alt="Preview of Why Choose a Translation Agency Registered with the Bulgarian MFA?" decoding="async" loading="lazy" src="previews/work_translation_agency_mfa_en_preview.jpg"/></a>
 <div class="work-tags">
 <span class="work-tag">Translation Industry</span>
 <span class="work-tag">B2B Content</span>
@@ -859,7 +1076,7 @@
 </article>
 <article class="portfolio-sample">
 <p class="work-client">English Health Content Sample</p>
-<h3 class="work-title">The Hidden Power of Serotonin and Dopamine</h3><a aria-label="Preview: The Hidden Power of Serotonin and Dopamine" class="project-preview project-preview-image" href="work_serotonin_dopamine_updated.pdf" rel="noopener" target="_blank"><img alt="Preview of The Hidden Power of Serotonin and Dopamine" decoding="async" loading="lazy" src="previews/work_serotonin_dopamine_updated_preview.webp"/></a>
+<h3 class="work-title">The Hidden Power of Serotonin and Dopamine</h3><a aria-label="Preview: The Hidden Power of Serotonin and Dopamine" class="project-preview project-preview-image" href="work_serotonin_dopamine_updated.pdf" rel="noopener" target="_blank"><img alt="Preview of The Hidden Power of Serotonin and Dopamine" decoding="async" loading="lazy" src="previews/work_serotonin_dopamine_updated_preview.jpg"/></a>
 <div class="work-tags">
 <span class="work-tag">Health &amp; Psychology</span>
 <span class="work-tag">Educational Content</span>
@@ -870,7 +1087,7 @@
 </article>
 <article class="portfolio-sample">
 <p class="work-client">Copywriting Portfolio</p>
-<h3 class="work-title">A-Derma Phys-AC Perfect: Review &amp; Opinion</h3><a aria-label="Preview: A-Derma Phys-AC Perfect: Review &amp; Opinion" class="project-preview project-preview-image" href="work_a_derma.pdf" rel="noopener" target="_blank"><img alt="Preview of A-Derma Phys-AC Perfect: Review &amp; Opinion" decoding="async" loading="lazy" src="previews/work_a_derma_preview.webp"/></a>
+<h3 class="work-title">A-Derma Phys-AC Perfect: Review &amp; Opinion</h3><a aria-label="Preview: A-Derma Phys-AC Perfect: Review &amp; Opinion" class="project-preview project-preview-image" href="work_a_derma.pdf" rel="noopener" target="_blank"><img alt="Preview of A-Derma Phys-AC Perfect: Review &amp; Opinion" decoding="async" loading="lazy" src="previews/work_a_derma_preview.jpg"/></a>
 <div class="work-tags">
 <span class="work-tag">Beauty</span>
 <span class="work-tag">Product Review</span>
@@ -879,10 +1096,9 @@
 <p class="work-description">Editorial-style beauty content combining personal experience, product information and practical usage guidance.</p>
 <a class="work-link" href="work_a_derma.pdf" rel="noopener" target="_blank">View PDF</a>
 </article>
-
 <article class="portfolio-sample">
 <p class="work-client">Copywriting Portfolio</p>
-<h3 class="work-title">Кокосовото масло: полезно или вредно за нас?</h3><a aria-label="Preview: Кокосовото масло: полезно или вредно за нас?" class="project-preview project-preview-image" href="work_coconut_1.pdf" rel="noopener" target="_blank"><img alt="Preview of Кокосовото масло: полезно или вредно за нас?" decoding="async" loading="lazy" src="previews/work_coconut_1_preview.webp"/></a>
+<h3 class="work-title">Кокосовото масло: полезно или вредно за нас?</h3><a aria-label="Preview: Кокосовото масло: полезно или вредно за нас?" class="project-preview project-preview-image" href="work_coconut_1.pdf" rel="noopener" target="_blank"><img alt="Preview of Кокосовото масло: полезно или вредно за нас?" decoding="async" loading="lazy" src="previews/work_coconut_1_preview.jpg"/></a>
 <div class="work-tags">
 <span class="work-tag">Wellness</span>
 <span class="work-tag">Informational Article</span>
