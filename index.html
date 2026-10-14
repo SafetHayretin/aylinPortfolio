@@ -880,6 +880,197 @@
       gap: 0.55rem;
     }
   }
+
+  /* CLIENT FEEDBACK */
+  .client-feedback-section {
+    background: var(--paper);
+  }
+
+  .feedback-intro {
+    max-width: 720px;
+    margin: -1rem 0 2.2rem;
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .feedback-card {
+    border: 1px solid var(--rule);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .feedback-image-wrap {
+    padding: 1rem;
+    background: #faf8f4;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .feedback-image-wrap img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background: #fff;
+  }
+
+  .feedback-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.1rem;
+  }
+
+  .feedback-client {
+    font-size: 0.76rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .feedback-language {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--warm);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 1100px) {
+    .feedback-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .feedback-image-wrap img {
+      height: auto;
+      max-height: 420px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .feedback-intro {
+      margin-top: -0.5rem;
+      margin-bottom: 1.6rem;
+      font-size: 0.9rem;
+    }
+
+    .feedback-image-wrap {
+      padding: 0.75rem;
+    }
+
+    .feedback-image-wrap img {
+      max-height: none;
+    }
+
+    .feedback-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.3rem;
+    }
+  }
+
+  /* NAVIGATION SPACING FIX */
+  @media (min-width: 1101px) {
+    nav {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    .nav-links {
+      gap: 2.4rem;
+      flex-wrap: nowrap;
+    }
+
+    .nav-links a {
+      white-space: nowrap;
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  @media (min-width: 1350px) {
+    .nav-links {
+      gap: 3rem;
+    }
+  }
+
+  /* FINAL NAV STRUCTURE/SPACING FIX */
+  @media (min-width: 1101px) {
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+    }
+
+    .nav-links > li {
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    .nav-links > li > a {
+      display: block;
+      white-space: nowrap;
+    }
+  }
+
+  /* FOUR-COLUMN SERVICES */
+  #services .services-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  #services .service-card {
+    padding: 2.4rem 1.6rem 2rem;
+    min-width: 0;
+  }
+
+  #services .service-number {
+    margin-bottom: 2.2rem;
+  }
+
+  #services .service-card h3 {
+    font-size: clamp(1.35rem, 1.45vw, 1.8rem);
+    line-height: 1.18;
+    margin-bottom: 1.15rem;
+  }
+
+  #services .service-card p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1100px) {
+    #services .services-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 700px) {
+    #services .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    #services .service-card {
+      padding: 1.7rem 1.2rem;
+    }
+  }
+
+  /* SOFTER SERVICE TITLES */
+  #services .service-card h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(1.55rem, 1.55vw, 1.95rem);
+    line-height: 1.12;
+    letter-spacing: 0;
+  }
 </style>
 </head>
 <body>
@@ -887,8 +1078,8 @@
 <span class="nav-name">Aylin Kadirova</span>
 <ul class="nav-links">
 <li><a href="#services">Services</a></li>
-<li><a href="#work">Work</a></li>
-<li><a href="#experience">Experience</a></li>
+<li><a href="#work">Work</a></li><li><a href="#client-feedback">Client Feedback</a></li>
+<li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li>
 <li><a href="#certifications">Credentials</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
@@ -896,7 +1087,7 @@
 <!-- HERO -->
 <section class="hero" id="home">
 <div class="hero-left">
-<p class="hero-eyebrow">Copywriter · Ghostwriter · Translator</p>
+<p class="hero-eyebrow">Content Writer · Copywriter · Ghostwriter · Translator</p>
 <h1 class="hero-name">Aylin<br/><em>Kadirova</em></h1>
 <p class="hero-title">Words that work across languages</p>
 <p class="hero-bio">
@@ -919,23 +1110,7 @@
 <section id="services">
 <p class="section-label">What I do</p>
 <h2 class="section-title">Services</h2>
-<div class="services-grid">
-<div class="service-card">
-<div class="service-number">01</div>
-<h3 class="service-name">Copywriting</h3>
-<p class="service-desc">SEO-optimised articles, blog posts, landing pages, email campaigns, and social media copy. Content built around clear goals, traffic, engagement, or conversion.</p>
-</div>
-<div class="service-card">
-<div class="service-number">02</div>
-<h3 class="service-name">Ghostwriting</h3>
-<p class="service-desc">Books, long-form articles, thought leadership content, reports and research-based editorial projects written in your voice.</p>
-</div>
-<div class="service-card">
-<div class="service-number">03</div>
-<h3 class="service-name">Translation &amp; Localisation</h3>
-<p class="service-desc">Multilingual content adaptation across Bulgarian, English, German, Turkish, and Russian. Cultural nuance and contextual accuracy, not just word-for-word conversion.</p>
-</div>
-</div>
+<div class="services-grid"><div class="service-card"><div class="service-number">01</div><h3>Content Writing</h3><p>Research-based articles, blog posts, website content and editorial pieces shaped around the audience, brand voice and purpose. Clear, engaging content built to inform, connect and support long-term visibility.</p></div><div class="service-card"><div class="service-number">02</div><h3>Copywriting</h3><p>Landing pages, email campaigns, social media copy and promotional content written with clear goals in mind, from engagement and lead generation to stronger conversion.</p></div><div class="service-card"><div class="service-number">03</div><h3>Ghostwriting</h3><p>Books, long-form articles, thought leadership content, reports and research-based editorial projects written in your voice.</p></div><div class="service-card"><div class="service-number">04</div><h3>Translation &amp; Localisation</h3><p>Multilingual content adaptation across Bulgarian, English, German, Turkish and Russian, with attention to tone, cultural nuance and contextual accuracy.</p></div></div>
 </section>
 <!-- WORK SAMPLE -->
 <section id="work">
@@ -1126,7 +1301,7 @@
 <a class="work-link" href="work_coconut_1.pdf" rel="noopener" target="_blank">View PDF</a>
 </article>
 </div>
-</section>
+</section><section class="client-feedback-section" id="client-feedback"><p class="section-label">CLIENT FEEDBACK</p><h2 class="section-title">A few words from clients I’ve worked with.</h2><p class="feedback-intro">Original feedback shared by clients across various projects.</p><div class="feedback-grid"><article class="feedback-card"><div class="feedback-image-wrap"><img alt="Original client feedback in English" decoding="async" loading="lazy" src="feedback/client_feedback_04.jpeg"/></div><div class="feedback-meta"><span class="feedback-client">Article Writing</span><span class="feedback-language">English</span></div></article><article class="feedback-card"><div class="feedback-image-wrap"><img alt="Original client feedback in Bulgarian" decoding="async" loading="lazy" src="feedback/client_feedback_05.jpeg"/></div><div class="feedback-meta"><span class="feedback-client">Client Project</span><span class="feedback-language">Bulgarian</span></div></article><article class="feedback-card"><div class="feedback-image-wrap"><img alt="Original client feedback in English" decoding="async" loading="lazy" src="feedback/client_feedback_06.jpeg"/></div><div class="feedback-meta"><span class="feedback-client">Copywriting / Editing</span><span class="feedback-language">English</span></div></article><article class="feedback-card"><div class="feedback-image-wrap"><img alt="Original client feedback in Bulgarian" decoding="async" loading="lazy" src="feedback/client_feedback_07.jpeg"/></div><div class="feedback-meta"><span class="feedback-client">Book / Long-form Writing</span><span class="feedback-language">Bulgarian</span></div></article><article class="feedback-card"><div class="feedback-image-wrap"><img alt="Original client feedback in Bulgarian" decoding="async" loading="lazy" src="feedback/client_feedback_08.jpeg"/></div><div class="feedback-meta"><span class="feedback-client">Article Writing</span><span class="feedback-language">Bulgarian</span></div></article><article class="feedback-card"><div class="feedback-image-wrap"><img alt="Original client feedback in Bulgarian" decoding="async" loading="lazy" src="feedback/client_feedback_09.jpeg"/></div><div class="feedback-meta"><span class="feedback-client">Content Writing</span><span class="feedback-language">Bulgarian</span></div></article><article class="feedback-card"><div class="feedback-image-wrap"><img alt="Original client feedback in Bulgarian" decoding="async" loading="lazy" src="feedback/client_feedback_10.jpeg"/></div><div class="feedback-meta"><span class="feedback-client">Product Descriptions</span><span class="feedback-language">Bulgarian</span></div></article><article class="feedback-card"><div class="feedback-image-wrap"><img alt="Original client feedback in English" decoding="async" loading="lazy" src="feedback/client_feedback_01.png"/></div><div class="feedback-meta"><span class="feedback-client">Recipe &amp; Lifestyle Content</span><span class="feedback-language">English</span></div></article><article class="feedback-card"><div class="feedback-image-wrap"><img alt="Original client feedback in Bulgarian" decoding="async" loading="lazy" src="feedback/client_feedback_02.png"/></div><div class="feedback-meta"><span class="feedback-client">Book / Long-form Writing</span><span class="feedback-language">Bulgarian</span></div></article><article class="feedback-card"><div class="feedback-image-wrap"><img alt="Original client feedback in Turkish" decoding="async" loading="lazy" src="feedback/client_feedback_03.png"/></div><div class="feedback-meta"><span class="feedback-client">Editorial Article</span><span class="feedback-language">Turkish</span></div></article></div></section>
 <!-- EXPERIENCE -->
 <section id="experience">
 <p class="section-label">Career</p>
@@ -1295,7 +1470,7 @@
 </section>
 <footer>
 <span>© 2026 Aylin Kadirova</span>
-<span>Copywriter · Ghostwriter · Translator</span>
+<span>Content Writer · Copywriter · Ghostwriter · Translator</span>
 </footer>
 <script>
 const imgs = {
