@@ -1071,6 +1071,65 @@
     line-height: 1.12;
     letter-spacing: 0;
   }
+
+  /* EDUCATION — THREE-CARD DESKTOP LAYOUT */
+  #education .education-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    border: 1px solid var(--rule);
+    background: #fff;
+  }
+
+  #education .education-card {
+    padding: 2.7rem 2rem;
+    min-width: 0;
+    border-right: 1px solid var(--rule);
+    background: #fff;
+  }
+
+  #education .education-card:last-child {
+    border-right: 0;
+  }
+
+  #education .education-institution {
+    margin: 0 0 1.35rem;
+    color: var(--warm);
+    font-size: 0.76rem;
+    line-height: 1.45;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  #education .education-degree {
+    margin: 0 0 1.3rem;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.6rem, 1.55vw, 2rem);
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  #education .education-description {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.72;
+  }
+
+  @media (max-width: 1100px) {
+    #education .education-grid {
+      grid-template-columns: 1fr;
+    }
+
+    #education .education-card {
+      border-right: 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    #education .education-card:last-child {
+      border-bottom: 0;
+    }
+  }
 </style>
 </head>
 <body>
@@ -1313,7 +1372,7 @@
 <p class="timeline-role">Content Writer &amp; Translator</p>
 <p class="timeline-company">DM Ghostwriting Agency</p>
 <ul class="timeline-bullets">
-<li>Authored, edited and structured 60+ long- and short-form content projects, including books, articles, website copy, landing pages, email content and social media posts.</li>
+<li>Authored, edited and structured 100+ long- and short-form content projects, including books, articles, website copy, landing pages, email content and social media posts.</li>
 <li>Translated and localized content between English, Bulgarian, German and Turkish, preserving tone and cultural fit.</li>
 <li>Researched, fact-checked, proofread and SEO-optimized content across a wide range of topics, evaluating sources for reliability and adapting complex information into clear, reader-friendly copy for international B2C and B2B clients.</li>
 </ul>
@@ -1362,22 +1421,7 @@
 <section id="education">
 <p class="section-label">Academic background</p>
 <h2 class="section-title">Education</h2>
-<div class="edu-grid">
-<div class="edu-card">
-<p class="edu-institution">University of Plovdiv "Paisii Hilendarski"</p>
-<h3 class="edu-degree">BSc in Linguistics and Information Technologies</h3>
-<p class="edu-detail">
-        A cross-disciplinary degree combining computational linguistics, language technologies, and software development. Key coursework included Programming Languages, Databases, Machine Translation, Computational Linguistics, Networks, and Text Editing, bridging the gap between language and technology in a way few writing professionals can offer.
-      </p>
-</div>
-<div class="edu-card">
-<p class="edu-institution">Ivan Vazov Foreign Language High School, Plovdiv</p>
-<h3 class="edu-degree">Secondary Education with Language Specialisation</h3>
-<p class="edu-detail">
-        Graduated with an overall grade of 5.74 out of 6.00. Achieved C1 level in English and B2 level in Russian (CEFR), reflecting a long-standing commitment to linguistic precision and language acquisition that runs throughout both academic and professional work.
-      </p>
-</div>
-</div>
+<div class="education-grid"><article class="education-card"><p class="education-institution">University of Plovdiv "Paisii Hilendarski"</p><h3 class="education-degree">Master of English Education and Methodology</h3><p class="education-description">Master’s programme focused on English language teaching, methodology, lesson planning, language acquisition and classroom practice. The programme develops advanced language competence together with the pedagogical skills needed to teach English effectively across different learner levels and educational contexts.</p></article><article class="education-card"><p class="education-institution">University of Plovdiv "Paisii Hilendarski"</p><h3 class="education-degree">BSc in Linguistics and Information Technologies</h3><p class="education-description">A cross-disciplinary degree combining computational linguistics, language technologies, and software development. Key coursework included Programming Languages, Databases, Machine Translation, Computational Linguistics, Networks, and Text Editing, bridging the gap between language and technology in a way few writing professionals can offer.</p></article><article class="education-card"><p class="education-institution">Ivan Vazov Foreign Language High School, Plovdiv</p><h3 class="education-degree">Secondary Education with Language Specialisation</h3><p class="education-description">Graduated with an overall grade of 5.74 out of 6.00. Achieved C1 level in English and B2 level in Russian (CEFR), reflecting a long-standing commitment to linguistic precision and language acquisition throughout both academic and professional work.</p></article></div>
 </section>
 <!-- CERTIFICATIONS -->
 <section id="certifications">
